@@ -102,4 +102,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/express-cicd-app:latest
+        run: 
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/express-cicd-app:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/express-cicd-app:latest
