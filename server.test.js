@@ -1,5 +1,4 @@
 const request = require('supertest');
-const express = require('express');
 const app = require('./server');
 
 describe('GET /', () => {
@@ -8,4 +7,8 @@ describe('GET /', () => {
         expect(res.statusCode).toEqual(200);
         expect(res.text).toBe('Hello World!');
     });
+});
+
+afterAll(async () => {
+    await app.close();
 });
