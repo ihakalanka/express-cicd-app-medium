@@ -103,3 +103,4 @@ jobs:
 
       - name: Build and Push Docker image
         run: docker buildx build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/express-cicd-app:latest --push .
+        working-directory: .
