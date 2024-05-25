@@ -1,6 +1,6 @@
 const request = require('supertest');
 const express = require('express');
-const app = require('./index');
+const app = require('./server');
 
 describe('GET /', () => {
     it('should return Hello World', async () => {
