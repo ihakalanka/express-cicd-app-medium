@@ -108,4 +108,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ihakalanka/express_cicd_app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/express_cicd_app:latest
