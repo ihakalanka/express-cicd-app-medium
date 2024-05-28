@@ -103,11 +103,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=express-cicd-app-medium
-            -Dsonar.organization=ihakalanka
-            -Dsonar.branch.name=main
-            -Dsonar.sources=.
-            -Dsonar.verbose=true
+            -Dsonar.projectKey=${{ secrets.SONARCLOUD_ORG }}_express-cicd-app-medium
+            -Dsonar.organization=${{ secrets.SONARCLOUD_ORG }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
