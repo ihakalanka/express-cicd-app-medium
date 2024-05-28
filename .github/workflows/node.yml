@@ -105,6 +105,7 @@ jobs:
           args: >
             -Dsonar.projectKey=${{ secrets.SONARCLOUD_ORG }}_express-cicd-app-medium
             -Dsonar.organization=${{ secrets.SONARCLOUD_ORG }}
+            -Dsonar.verbose=true
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
