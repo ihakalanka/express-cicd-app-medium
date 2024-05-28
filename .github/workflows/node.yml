@@ -101,6 +101,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=express-cicd-app
+            -Dsonar.organization=${{ secrets.SONARCLOUD_ORG }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
