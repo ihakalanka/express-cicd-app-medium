@@ -106,6 +106,8 @@ jobs:
             -Dsonar.projectKey=express-cicd-app-medium
             -Dsonar.organization=ihakalanka
             -Dsonar.branch.name=main
+            -Dsonar.sources=.
+            -Dsonar.verbose=true
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
